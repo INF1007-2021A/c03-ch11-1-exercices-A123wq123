@@ -35,6 +35,16 @@ class Character:
 		if self.weapon == None:
 			self.weapon = Weapon.make_unarmed(self)
 
+	def compute_damage(a, d):
+		chance = random.randint(0, 400)
+		if chance <= 25:
+			crit = 2
+		else:
+			crit = 1
+		((2 * a.level()/5 + 2) * a.weapon.power * (a.attack/d.defense)/50 + 2) * modifier
+
+
+
 	"""
 	Un personnage dans le jeu
 
